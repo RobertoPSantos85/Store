@@ -1,8 +1,16 @@
 ﻿using System;
+using Flunt.Notifications;
 
-public class Class1
+namespace Store.Domain.Entities
 {
-	public Class1()
-	{
-	}
+    public class Entity:Notifiable
+    {
+        public Entity()
+        {
+            Id = Guid.NewGuid();
+        }
+        public Guid Id { get; private set; }
+    }
 }
+
+
